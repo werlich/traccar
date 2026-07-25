@@ -1,0 +1,11 @@
+{
+  "distanceUnit": "nmi",
+  "timezone": "America/Sao_Paulo",
+  "colorPrimary": "#053050",
+  "colorSecondary": "#c2a35b",
+  "darkMode": true,
+  "title": "SIGNAU",
+  "description": "SIGNAU - Sistemas Integrados em Gestao Nautica",
+  "logo": "/logo-signau.png?v=9",
+  "logoInverted": "/logo-signau.png?v=9"
+}

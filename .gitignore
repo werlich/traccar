@@ -1,0 +1,22 @@
+# Traccar runtime / upstream binaries (install from official release)
+jre/
+lib/
+schema/
+templates/
+web/
+tracker-server.jar
+*.jar
+
+# Runtime data — not committed (public repo)
+data/
+logs/
+media/
+*.mv.db
+*.trace.db
+
+# Local / OS
+.env
+.DS_Store
+*.swp
+__pycache__/
+.venv/
