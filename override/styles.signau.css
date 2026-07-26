@@ -4,24 +4,27 @@ body { margin: 0; padding: 0; }
 .root { display: flex; flex-direction: column; height: 100%; }
 @media print { * { height: auto !important; overflow: visible !important; } }
 
-/* Logo SIGNAU no login — círculo grande (não reduzir) */
+/* Logo no login — mesmo tamanho do hero em signau.cc (~230px) */
+html.signau-login [class*="-sidebar"] img[src*="logo"],
 html.signau-login img[src*="logo-signau"],
 html.signau-login img[src*="/logo.png"],
 html.signau-login img[src*="logo.svg"] {
-  width: 280px !important;
-  height: 280px !important;
-  max-width: 280px !important;
-  max-height: 280px !important;
-  min-width: 280px !important;
-  min-height: 280px !important;
+  width: clamp(168px, 34vw, 230px) !important;
+  height: clamp(168px, 34vw, 230px) !important;
+  max-width: 230px !important;
+  max-height: 230px !important;
+  min-width: unset !important;
+  min-height: unset !important;
   border-radius: 50% !important;
-  clip-path: circle(50% at 50% 50%) !important;
-  -webkit-clip-path: circle(50% at 50% 50%) !important;
-  object-fit: cover !important;
+  border: 3px solid #c2a35b !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  object-fit: contain !important;
   object-position: center !important;
-  background: transparent !important;
-  padding: 0 !important;
+  background: #fff !important;
+  padding: 12% !important;
   box-sizing: border-box !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Login — fundo leve (SVG ~3KB) com tema de rastreamento */
