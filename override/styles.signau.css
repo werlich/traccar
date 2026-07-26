@@ -21,3 +21,26 @@ img[src*="logo.svg"] {
   object-position: center !important;
   background: transparent !important;
 }
+
+/* Login — fundo leve (SVG) relacionado a rastreamento */
+html.signau-login,
+html.signau-login body {
+  min-height: 100%;
+  background-color: #06263d !important;
+  background-image: url("/login-bg.svg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+html.signau-login .root,
+html.signau-login .root > main {
+  background: transparent !important;
+}
+html.signau-login .root > main > [class*="-sidebar"] {
+  background: transparent !important;
+}
+html.signau-login .MuiPaper-root {
+  backdrop-filter: blur(6px);
+  background-color: rgba(8, 28, 46, 0.78) !important;
+}

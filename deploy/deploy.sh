@@ -32,7 +32,7 @@ install -d "${TRACCAR_HOME}/override"
 rsync -a --delete "${REPO_ROOT}/override/" "${TRACCAR_HOME}/override/"
 
 # Espelha assets críticos no web/ (alguns clients/cache usam esses paths)
-for f in logo-signau.png logo.png styles.signau.css styles.css favicon.ico; do
+for f in logo-signau.png logo.png styles.signau.css styles.css favicon.ico login-bg.svg; do
   if [[ -f "${TRACCAR_HOME}/override/${f}" ]]; then
     cp -f "${TRACCAR_HOME}/override/${f}" "${TRACCAR_HOME}/web/${f}"
   fi
