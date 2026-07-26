@@ -22,7 +22,7 @@ img[src*="logo.svg"] {
   background: transparent !important;
 }
 
-/* Login — fundo leve (SVG ~3KB) com tema de rastreamento */
+/* Login — mapa + barco + jet ski (WebP leve) */
 html.signau-login,
 html.signau-login body {
   min-height: 100%;
@@ -38,11 +38,21 @@ html.signau-login .root > main > [class*="-sidebar"] {
 html.signau-login .MuiPaper-root {
   background-color: transparent !important;
   background-image:
-    linear-gradient(120deg, rgba(5, 48, 80, 0.42), rgba(14, 111, 140, 0.28)),
+    linear-gradient(115deg, rgba(5, 48, 80, 0.55) 0%, rgba(5, 48, 80, 0.28) 42%, rgba(14, 111, 140, 0.22) 100%),
+    url("/login-boat.webp"),
+    url("/login-jetski.webp"),
     url("/login-bg.svg") !important;
-  background-size: cover !important;
-  background-position: center !important;
   background-repeat: no-repeat !important;
+  background-size:
+    cover,
+    min(42vw, 420px) auto,
+    min(28vw, 260px) auto,
+    cover !important;
+  background-position:
+    center,
+    left 6% bottom 8%,
+    right 8% bottom 10%,
+    center !important;
   box-shadow: none !important;
   --Paper-overlay: none !important;
 }
@@ -51,8 +61,23 @@ html.signau-login .MuiPaper-root form {
   margin: auto;
   padding: 1.5rem 1.35rem 1.25rem;
   border-radius: 14px;
-  background: rgba(8, 28, 46, 0.82) !important;
+  background: rgba(8, 28, 46, 0.84) !important;
   backdrop-filter: blur(8px);
   box-shadow: 0 16px 40px rgba(2, 16, 28, 0.35);
   border: 1px solid rgba(232, 215, 168, 0.18);
+}
+
+@media (max-width: 900px) {
+  html.signau-login .MuiPaper-root {
+    background-size:
+      cover,
+      min(55vw, 280px) auto,
+      min(40vw, 180px) auto,
+      cover !important;
+    background-position:
+      center,
+      left 2% bottom 4%,
+      right 2% bottom 5%,
+      center !important;
+  }
 }
