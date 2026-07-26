@@ -38,20 +38,20 @@ html.signau-login .root > main > [class*="-sidebar"] {
 html.signau-login .MuiPaper-root {
   background-color: transparent !important;
   background-image:
-    linear-gradient(115deg, rgba(5, 48, 80, 0.55) 0%, rgba(5, 48, 80, 0.28) 42%, rgba(14, 111, 140, 0.22) 100%),
+    linear-gradient(160deg, rgba(5, 48, 80, 0.62) 0%, rgba(5, 48, 80, 0.18) 45%, rgba(5, 48, 80, 0.08) 100%),
     url("/login-boat.webp"),
     url("/login-jetski.webp"),
     url("/login-bg.svg") !important;
   background-repeat: no-repeat !important;
   background-size:
     cover,
-    min(42vw, 420px) auto,
-    min(28vw, 260px) auto,
+    min(52vw, 560px) auto,
+    min(38vw, 360px) auto,
     cover !important;
   background-position:
     center,
-    left 6% bottom 8%,
-    right 8% bottom 10%,
+    left 2% bottom 0%,
+    right 1% bottom 2%,
     center !important;
   box-shadow: none !important;
   --Paper-overlay: none !important;
@@ -71,13 +71,13 @@ html.signau-login .MuiPaper-root form {
   html.signau-login .MuiPaper-root {
     background-size:
       cover,
-      min(55vw, 280px) auto,
-      min(40vw, 180px) auto,
+      min(70vw, 340px) auto,
+      min(52vw, 240px) auto,
       cover !important;
     background-position:
       center,
-      left 2% bottom 4%,
-      right 2% bottom 5%,
+      left 0 bottom 0,
+      right 0 bottom 0,
       center !important;
   }
 }
