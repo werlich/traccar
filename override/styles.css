@@ -4,7 +4,7 @@ body { margin: 0; padding: 0; }
 .root { display: flex; flex-direction: column; height: 100%; }
 @media print { * { height: auto !important; overflow: visible !important; } }
 
-/* Logo no login — mesmo tamanho do hero em signau.cc (~230px) */
+/* Logo no login — tamanho do hero signau.cc, com o círculo/fundo da própria arte */
 html.signau-login [class*="-sidebar"] img[src*="logo"],
 html.signau-login img[src*="logo-signau"],
 html.signau-login img[src*="/logo.png"],
@@ -16,18 +16,18 @@ html.signau-login img[src*="logo.svg"] {
   min-width: unset !important;
   min-height: unset !important;
   border-radius: 50% !important;
-  border: 3px solid #c2a35b !important;
-  clip-path: none !important;
-  -webkit-clip-path: none !important;
-  object-fit: contain !important;
+  border: none !important;
+  clip-path: circle(50% at 50% 50%) !important;
+  -webkit-clip-path: circle(50% at 50% 50%) !important;
+  object-fit: cover !important;
   object-position: center !important;
-  background: #fff !important;
-  padding: 12% !important;
+  background: transparent !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: none !important;
 }
 
-/* Login — fundo leve (SVG ~3KB) com tema de rastreamento */
+/* Login — fundo de rastreamento (SVG) */
 html.signau-login,
 html.signau-login body {
   min-height: 100%;
@@ -43,7 +43,7 @@ html.signau-login .root > main > [class*="-sidebar"] {
 html.signau-login .MuiPaper-root {
   background-color: transparent !important;
   background-image:
-    linear-gradient(120deg, rgba(5, 48, 80, 0.42), rgba(14, 111, 140, 0.28)),
+    linear-gradient(160deg, rgba(5, 48, 80, 0.45) 0%, rgba(5, 48, 80, 0.18) 48%, rgba(14, 111, 140, 0.12) 100%),
     url("/login-bg.svg") !important;
   background-size: cover !important;
   background-position: center !important;
