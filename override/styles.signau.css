@@ -40,7 +40,8 @@ html.signau-login .root > main {
 html.signau-login .root > main > [class*="-sidebar"] {
   background: #053050 !important;
 }
-html.signau-login .MuiPaper-root {
+/* Só o painel de login — não aplicar em menus MUI (idioma etc.) */
+html.signau-login .root > main > .MuiPaper-root {
   position: relative !important;
   background-color: transparent !important;
   background-image:
@@ -52,21 +53,20 @@ html.signau-login .MuiPaper-root {
   box-shadow: none !important;
   --Paper-overlay: none !important;
 }
-html.signau-login .MuiPaper-root form {
+html.signau-login .root > main > .MuiPaper-root form {
   width: min(100%, 26rem);
   margin: auto;
   padding: 1.5rem 1.35rem 1.25rem;
   border-radius: 14px;
   background: rgba(8, 28, 46, 0.88) !important;
-  /* sem backdrop-filter: quebra position:fixed do seletor de idioma */
   box-shadow: 0 16px 40px rgba(2, 16, 28, 0.35);
   border: 1px solid rgba(232, 215, 168, 0.18);
 }
-html.signau-login [class*="-options"] {
-  position: absolute !important;
+html.signau-login .root > main > .MuiPaper-root [class*="-options"] {
+  position: fixed !important;
   top: 16px !important;
   right: 16px !important;
   left: auto !important;
-  z-index: 5 !important;
+  z-index: 1200 !important;
   margin: 0 !important;
 }
