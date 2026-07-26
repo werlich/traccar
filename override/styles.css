@@ -22,25 +22,37 @@ img[src*="logo.svg"] {
   background: transparent !important;
 }
 
-/* Login — fundo leve (SVG) relacionado a rastreamento */
+/* Login — fundo leve (SVG ~3KB) com tema de rastreamento */
 html.signau-login,
 html.signau-login body {
   min-height: 100%;
-  background-color: #06263d !important;
-  background-image: url("/login-bg.svg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
+  background-color: #0a4a6a !important;
 }
 html.signau-login .root,
 html.signau-login .root > main {
   background: transparent !important;
 }
 html.signau-login .root > main > [class*="-sidebar"] {
-  background: transparent !important;
+  background: #053050 !important;
 }
 html.signau-login .MuiPaper-root {
-  backdrop-filter: blur(6px);
-  background-color: rgba(8, 28, 46, 0.78) !important;
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(120deg, rgba(5, 48, 80, 0.42), rgba(14, 111, 140, 0.28)),
+    url("/login-bg.svg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  box-shadow: none !important;
+  --Paper-overlay: none !important;
+}
+html.signau-login .MuiPaper-root form {
+  width: min(100%, 26rem);
+  margin: auto;
+  padding: 1.5rem 1.35rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(8, 28, 46, 0.82) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 16px 40px rgba(2, 16, 28, 0.35);
+  border: 1px solid rgba(232, 215, 168, 0.18);
 }
