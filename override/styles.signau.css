@@ -41,6 +41,7 @@ html.signau-login .root > main > [class*="-sidebar"] {
   background: #053050 !important;
 }
 html.signau-login .MuiPaper-root {
+  position: relative !important;
   background-color: transparent !important;
   background-image:
     linear-gradient(160deg, rgba(5, 48, 80, 0.45) 0%, rgba(5, 48, 80, 0.18) 48%, rgba(14, 111, 140, 0.12) 100%),
@@ -56,8 +57,16 @@ html.signau-login .MuiPaper-root form {
   margin: auto;
   padding: 1.5rem 1.35rem 1.25rem;
   border-radius: 14px;
-  background: rgba(8, 28, 46, 0.82) !important;
-  backdrop-filter: blur(8px);
+  background: rgba(8, 28, 46, 0.88) !important;
+  /* sem backdrop-filter: quebra position:fixed do seletor de idioma */
   box-shadow: 0 16px 40px rgba(2, 16, 28, 0.35);
   border: 1px solid rgba(232, 215, 168, 0.18);
+}
+html.signau-login [class*="-options"] {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  left: auto !important;
+  z-index: 5 !important;
+  margin: 0 !important;
 }
